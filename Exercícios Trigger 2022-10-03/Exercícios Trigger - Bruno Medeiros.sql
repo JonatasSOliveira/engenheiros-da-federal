@@ -45,16 +45,15 @@ INSERT INTO produto (nome,preco_custo,preco_venda,estoque) values ('CHOKITO',2.3
 INSERT INTO produto (nome,preco_custo,preco_venda,estoque) values ('BACONZITOS',4.7,9.0,80);
 
 
-/*
+/* ******************** TRIGGER ******************** 
 Exercícios de fixação - utilize o script do estudo de caso
 
 01- Escreva quatro triggers de sintaxe - a trigger não precisa ter funcionalidade, basta não dar erro de sintaxe. Use variável global para testar.
 
 - Faça uma declarando variáveis e com select into; 
 
-*/
 INSERT INTO venda VALUES ();
-
+*/
 
 
 SELECT * FROM venda;
@@ -113,3 +112,8 @@ Uma trigger que tem a função de gerar o RA automático na tabela ALUNO deve se
 •	Implemente a trigger - RA igual a concatenção do ano corrente, código do curso e o id do cadastro do aluno. 
 
 06- De acordo com o seu projeto de banco de dados, pense em pelo menos 3 trigger úteis. Discuta com os seus colegas em relação a relevância e implemente-as.
+
+
+
+
+
