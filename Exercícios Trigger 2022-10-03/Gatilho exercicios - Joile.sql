@@ -61,3 +61,27 @@ BEGIN
 END;
 //
 DELIMITER ;
+
+/*
+04- Uma trigger que tem a função impedir a venda de um produto inferior a 50% do preço de venda deve ser associado para qual:
+•	Tabela? produto
+•	Tempo? before
+•	Evento? insert 
+•	Implemente a trigger
+*/
+
+DELIMITER // 
+CREATE TRIGGER impedir_venda 
+BEFORE 
+INSERT
+ON produto
+FOR EACH ROW 
+BEGIN
+	
+	IF produto.venda < (preço.custo * 1.50) THEN 
+		 SET NEW = 'preço de venda inferior a 50%';
+    END IF;
+
+END;
+//
+DELIMITER ;
