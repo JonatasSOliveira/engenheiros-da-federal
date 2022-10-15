@@ -1,9 +1,11 @@
+/*
 02- Uma trigger que tem a função adicionar a entrada de produtos no estoque deve ser associado para qual:
 •	Tabela? item.compra e produto
 •	Tempo? after
 •	Evento? insert
 •	Precisa de variáveis? Quais? item_compra.quantidade e produto.estoque
-•	Implemente a trigger
+•	Implemente a trigger 
+*/
 
 DELIMITER // 
 CREATE TRIGGER adicionar_entrada 
@@ -17,11 +19,13 @@ END;
 //
 DELIMITER ;
 
+/*
 03- Uma trigger que tem a função criar um registro de auditoria quando um pagamento e recebimento for alterada deve ser associado para qual(is):
 •	Tabela(s)? Pagamento e Recebimento
 •	Tempo? After
 •	Evento? Update
 •	Implemente a trigger (pode criar a tabela de auditoria)
+*/
 
 CREATE TABLE auditoria(
 tabela VARCHAR(40),
