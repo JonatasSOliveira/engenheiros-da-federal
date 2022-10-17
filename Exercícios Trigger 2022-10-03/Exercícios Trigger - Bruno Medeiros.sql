@@ -100,12 +100,28 @@ FOR EACH ROW
 DELIMITER ;
 
 /*
-04- Uma trigger que tem a função impedir a venda de um produto inferior a 50% do preço de venda deve ser associado para qual:
+04- Uma trigger que tem a função impedir a venda de um produto inferior a 50% do preço de 
+venda deve ser associado para qual:
 •	Tabela?
 •	Tempo?
 •	Evento?
 •	Implemente a trigger
 */
+
+DELIMITER //
+CREATE TRIGGER auditoria_venda
+BEFORE INSERT ON item_venda
+FOR EACH ROW
+
+	BEGIN
+
+		IF item_venda.preco < (produto.preco * 0.5);
+		END IF;
+
+	END;
+
+//
+DELIMITER ;
 
 /*
 05- Este é para testar a sintaxe - tente implementar sem o script
