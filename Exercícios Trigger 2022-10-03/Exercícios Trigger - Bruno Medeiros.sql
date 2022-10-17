@@ -109,7 +109,7 @@ venda deve ser associado para qual:
 */
 
 DELIMITER //
-CREATE TRIGGER auditoria_venda
+CREATE TRIGGER validar_venda
 BEFORE INSERT ON item_venda
 FOR EACH ROW
 
